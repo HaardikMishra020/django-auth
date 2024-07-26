@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Django App
+        {% endblock %}
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/index.js' %}" defer></script>
+</head>
+<body>
+    <nav>
+        {% comment %} <a href="/">
+            <span role="img" aria-label="Home">🏠</span>
+        </a> | 
+        <a href="/about">
+            <span role="img" aria-label="About">😀</span>
+        </a> | 
+        <a href="{%url 'register' %}">
+            <span role="img" aria-label="Register">&#128509;</span>
+        </a> |
+        <a href="{%url 'login' %}">
+            <span role="img" aria-label="Login">&#128510;</span>
+        </a> {% endcomment %}
+        {%if user.is_authenticated%}
+        <a class="logout-btn"href="{%url 'logout' %}">
+            <button>Logout</button>
+        </a>{%endif%}
+    </nav>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <main class="card">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

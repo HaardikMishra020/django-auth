@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h2>Hi, {{data.username}}</h2>
+        <a href="{% url 'profile' %}">
+            <button>Go to Profile</button>
+        </a>
+        <a href="{% url 'change-password' %}">
+            <button>Change Password</button>
+        </a>
+{% endblock %}

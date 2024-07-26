@@ -1,0 +1,110 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pydx
+
+# Environment variables file
+.env
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+
+# If you are using SQLite database
+db.sqlite3
+db.sqlite3-journal
+
+# Django migrations
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# If you're using coverage for testing
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# If you're using pytest
+.pytest_cache/
+
+# If you're using Django Compressor
+compressor/
+
+# If you're using Heroku
+/.heroku
+
+# If you're using Docker
+*.swp
+*~
+
+# If you're using Jupyter Notebook
+.ipynb_checkpoints
+
+# If you're using Visual Studio Code
+.vscode/
+
+# If you're using JetBrains IDE (PyCharm)
+.idea/
+
+# If you're using virtual environments
+venv/
+env/
+ENV/
+.venv/
+.VENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# If you're using macOS
+.DS_Store
+
+# Thumbnails
+*_thumb.*
+
+# Ignoring static files if they're generated dynamically
+staticfiles/
+media/
+
+# Node modules if you're using Node.js
+node_modules/
+npm-debug.log
+
+# Ignoring compiled or minified files
+*.min.js
+*.min.css
+
+# Ignoring build directories
+build/
+dist/
+
+# Ignoring local configurations
+local_settings.py
+
+# Ignoring Docker files
+docker-compose.override.yml
+
+# Ignore Django database backup files
+*.bak
+
+# Ignore tarballs, zips, etc.
+*.tar
+*.tar.gz
+*.zip
+*.gz
+*.rar
+*.7z
+
+# If you are using Celery
+celerybeat-schedule
